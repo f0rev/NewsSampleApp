@@ -1,0 +1,107 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.feevx.ravan.newssampleapp"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    dataBinding {
+        enabled = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.android.support:support-v4:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    def support_library_version = "27.1.1"
+    def lifecycle_version = "1.1.1"
+    def room_version = "1.1.0"
+    def butterknife_version = "8.8.1"
+    def retrofit_version = "2.4.0"
+    def dagger2_version = "2.15"
+    def glide_version = "4.7.1"
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+//Javax Annotation
+    compileOnly 'org.glassfish:javax.annotation:10.0-b28'
+
+//Support Libraries
+    implementation "com.android.support:appcompat-v7:$support_library_version"
+    implementation "com.android.support:recyclerview-v7:$support_library_version"
+    implementation "com.android.support:cardview-v7:$support_library_version"
+
+// ViewModel and LiveData
+    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
+    implementation "android.arch.lifecycle:common-java8:$lifecycle_version"
+
+//Room
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    annotationProcessor "android.arch.persistence.room:compiler:$room_version"
+// optional - RxJava support for Room
+    implementation "android.arch.persistence.room:rxjava2:$room_version"
+
+//RxJava
+    implementation "io.reactivex.rxjava2:rxjava:2.1.14-RC1"
+//RxAndroid
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+
+//Butterknife
+    implementation "com.jakewharton:butterknife:$butterknife_version"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknife_version"
+
+//Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+//RxJava2 Adapter
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+//Gson Converter
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
+//SQL Brite
+    implementation 'com.squareup.sqlbrite3:sqlbrite:3.2.0'
+
+//Dagger 2
+    implementation "com.google.dagger:dagger:$dagger2_version"
+    implementation "com.google.dagger:dagger-android-support:$dagger2_version"
+    annotationProcessor "com.google.dagger:dagger-compiler:$dagger2_version"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$dagger2_version"
+
+//Glide
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
+
+//Calligraphy
+    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
+
+    //ProgressBar
+    implementation 'com.victor:lib:1.0.4'
+
+
+}

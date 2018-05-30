@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="news"
+            type="com.feevx.ravan.newssampleapp.api.response.NewsItem" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:clickable="true"
+            android:orientation="vertical"
+            tools:context=".ui.fragments.NewsDetailsFragment">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:picture="@{news.picture}" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_gravity="bottom">
+
+                    <View
+                        android:id="@+id/title_shadow"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alpha="0.7"
+                        android:background="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/title"
+                        fontPath="fonts/SFUITextRegularRu.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:padding="8dp"
+                        android:shadowColor="#2F619C"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:text="@{news.title}"
+                        android:textColor="#c1f7ff"
+                        android:textSize="18sp" />
+
+                </FrameLayout>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/short_text"
+                fontPath="fonts/SFUITextLightRu.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:padding="8dp"
+                android:shadowColor="#2F619C"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="@{news.shortText}"
+                android:textColor="#c1f7ff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/full_text"
+                fontPath="fonts/SFThinEn.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:padding="8dp"
+                android:shadowColor="#2F619C"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="@{news.fullText}"
+                android:textColor="#c1f7ff"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    fontPath="fonts/SFUITextMediumRu.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:padding="8dp"
+                    android:shadowColor="#86633F"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    android:text="@string/coefficient"
+                    android:textColor="#FCA32A"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/coefficient"
+                    fontPath="fonts/SFUITextMediumRu.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:padding="8dp"
+                    android:shadowColor="#86633F"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    android:text="@{news.coefficient}"
+                    android:textColor="#FCA32A"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/publicated_at"
+                fontPath="fonts/SFUITextMediumRu.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:padding="8dp"
+                android:shadowColor="#86633F"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="@{news.publicatedAt}"
+                android:textColor="#FCA32A"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/schedule"
+                fontPath="fonts/SFUITextMediumRu.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:padding="8dp"
+                android:shadowColor="#86633F"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="@{news.schedule}"
+                android:textColor="#FCA32A"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

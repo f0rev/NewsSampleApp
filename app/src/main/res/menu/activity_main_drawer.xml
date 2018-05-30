@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_all_news"
+            android:icon="@drawable/newspaper"
+            android:title="@string/news" />
+        <item
+            android:id="@+id/nav_football"
+            android:icon="@drawable/soccer"
+            android:title="@string/football" />
+        <item
+            android:id="@+id/nav_basketball"
+            android:icon="@drawable/basketball"
+            android:title="@string/basketball" />
+        <item
+            android:id="@+id/nav_volleyball"
+            android:icon="@drawable/volleyball"
+            android:title="@string/volleyball" />
+        <item
+            android:id="@+id/nav_hockey"
+            android:icon="@drawable/hockey_sticks"
+            android:title="@string/hockey" />
+    </group>
+
+    <item android:title="@string/additional">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/settings"
+                android:title="@string/settings" />
+            <item
+                android:id="@+id/nav_about_us"
+                android:icon="@drawable/information"
+                android:title="@string/about_us" />
+        </menu>
+    </item>
+
+</menu>
